@@ -22,7 +22,7 @@ let info2 = {
 };
 
 for (let values in info) {
-  if (info[values] === info.recorrente && info[values] === info2.recorrente) {
+  if (values === 'recorrente' && info[values] === 'Sim' && info2[values] === 'Sim') {
     console.log('Ambos recorrentes');
   } else {
     console.log(info[values] + ' e ' + info2[values]);
