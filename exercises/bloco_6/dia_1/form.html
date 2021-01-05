@@ -8,7 +8,7 @@
 <body>
   <h3>Curriculum Form</h3>
   <fieldset>
-    <legend>Informações Pessoais</legend>
+    <legend>Personal Information</legend>
     <label for="name">
       Name:
       <input type="text" name="name" id="name" maxlength=40 required>
@@ -38,9 +38,21 @@
       State:
       <select name="state-BR" id="state" required></select>
     </label>
+    <br>
+    <label for="housing">
+      Housing Type:
+      <label for="house">
+        <input type="radio" name="housing-type" value='house' id="house">
+        House
+      </label>
+      <label for="apartment">
+        <input type="radio" name="housing-type" value='apartment' id="apartment">
+        Apartment
+      </label>
+    </label>
   </fieldset>
   <fieldset>
-    <legend>Dados do seu último emprego</legend>
+    <legend>Data from your previous jobs</legend>
   </fieldset>
   <script src="script.js"></script>
 </body>
