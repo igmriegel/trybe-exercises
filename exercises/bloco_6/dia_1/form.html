@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CV Form</title>
+</head>
+<body>
+  <h1>Curriculum Form</h1>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">
+        Name:
+        <input type="text" name="name" id="name" maxlength=40 required>
+      </label>
+      <label for="email">
+        e-mail:
+        <input type="email" name="e-mail" id="email" maxlength=50 required>
+      </label>
+      <label for="cpf">
+        C.P.F.:
+        <input type="text" name="C.P.F." id="cpf" maxlength=11 required>
+      </label>
+      <label for="Address">
+        Address:
+        <input type="text" name="Address" id="Address" maxlength=200 required>
+      </label>
+      <label for="city">
+        City:
+        <input type="text" name="City" id="city" maxlength=28 required>
+      </label>
+      <label for="state">
+        State:
+        <select name="state-BR" id="state" required></select>
+      </label>
+      <label for="housing">
+        Housing Type:
+        <label class="radio-Btns" for="house">
+          <input class="radio-Btns" type="radio" name="housing-type" value='house' id="house" >
+          House
+        </label>
+        <label class="radio-Btns" for="apartment">
+          <input class="radio-Btns" type="radio" name="housing-type" value='apartment' id="apartment" >
+          Apartment
+        </label>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Data from your previous jobs</legend>
+      <label for="curriculum-summary">
+        Curriculum Summary:
+        <textarea 
+          name="curriculum summary"
+          id="curriculum summary"
+          maxlength="1000" cols="100"
+          rows="10"
+          placeholder="Please describe with few words your previous work experiences."
+          required></textarea>
+      </label>
+      <label for="Job">
+        Job:
+        <input type="text" name="Job" id="Job" maxlength=40 required>
+      </label>
+      <label for="Job-Description">
+        Job-Description:
+        <input type="text" name="Job-Description" id="Job-Description" maxlength=500 required>
+      </label>
+      <label for="Starting-Date">
+        Job Starting Date:
+        <input type="text" name="Starting-Date" placeholder="dd/mm/yyyy" id="Job-Starting-Date" required>
+      </label>
+    </fieldset>
+    <button type="submit" id="submit-btn">Enviar</button>
+    <button type="reset" id="reset-btn">Limpar</button>
+  </form>
+  <section id="display-form-data"></section>
+  <script src="script.js"></script>
+</body>
+</html>
