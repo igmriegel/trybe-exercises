@@ -1,4 +1,3 @@
-// Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
 const assert = require('assert');
 
@@ -72,8 +71,21 @@ const expectedResult = [
   'J. R. R. Tolkien'
 ]
 
+// Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
 function fantasyOrScienceFictionAuthors() {
-  // escreva seu código aqui
+  return books
+  .filter((currentBook) => (currentBook.genre === 'Fantasia' || currentBook.genre === 'Ficção Científica'))
+  .map((filteredBook) => filteredBook.author.name)
+  .sort()
 }
+
+// Gabarito Proposto pela Trybe
+// function fantasyOrScienceFictionAuthors() {
+//   const wantedGenres = ['Fantasia', 'Ficção Científica'];
+//   return books
+//     .filter(book => wantedGenres.includes(book.genre))
+//     .map(book => book.author.name).sort();
+// };
 
 assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
