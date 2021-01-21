@@ -75,8 +75,21 @@ const expectedResult = {
   releaseYear: 1991
 };
 
+// const getTheLongestName = (prev, curr, index, array) => prev.length < curr.name.length ? 
+//   {index: index, length: curr.name.length} :
+//   prev;
+
+// function longestNamedBook() {
+//   const longestName = books.reduce(getTheLongestName, {index: 0, length: 0});
+//   return books[longestName.index];
+// }
+
+const getTheLongestName = (prevBook, currBook) => prevBook.name.length < currBook.name.length ? currBook : prevBook;
+
 function longestNamedBook() {
-  // escreva seu código aqui
+  return books.reduce(getTheLongestName);
 }
+
+console.log(longestNamedBook())
 
 assert.deepStrictEqual(longestNamedBook(), expectedResult);
