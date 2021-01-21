@@ -1,4 +1,3 @@
-// Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 
 const assert = require('assert');
 
@@ -65,10 +64,24 @@ const books = [
   },
 ];
 
+// Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 const expectedResult = false;
 
+// Resolução proposta pela Trybe
 function authorUnique() {
-  // escreva seu código aqui
+  return books.every((book) =>
+    !books.some((bookSome) => 
+    (bookSome.author.birthYear === book.author.birthYear) &&
+    (bookSome.author.name !== book.author.name)));
 }
+  
+  // function authorUnique() {
+    //   return books.forEach(function (book) {
+      //     return books.every(function (authorBirthYear) {
+//       return book.author.birthYear !== authorBirthYear.author.birthYear;
+//     });
+//   });
+// }
+
 
 assert.strictEqual(authorUnique(), expectedResult);
