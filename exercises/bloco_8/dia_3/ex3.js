@@ -67,8 +67,21 @@ const books = [
 
 const expectedResult = 43;
 
+// function averageAge() {
+//   return books.reduce((prev, curr, index, array) => {
+//     if (index + 1 === array.length) return (prev + curr.releaseYear - curr.author.birthYear) / array.length; 
+//     return prev + curr.releaseYear - curr.author.birthYear;
+//   },0);
+// }
+
+// const calculateAgeAndAverage = (prev, curr, index, array) => (index + 1 === array.length) ?
+//   (prev + curr.releaseYear - curr.author.birthYear) / array.length :
+//   prev + curr.releaseYear - curr.author.birthYear;
+
+const calculateAgeAndAverage = (sum, curr) => sum + curr.releaseYear - curr.author.birthYear;
+
 function averageAge() {
-  // escreva seu código aqui
+  return books.reduce(calculateAgeAndAverage, 0) / books.length;
 }
 
 assert.strictEqual(averageAge(), expectedResult);

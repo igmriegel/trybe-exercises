@@ -6,9 +6,27 @@ const assert = require('assert');
 const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
+// Minha solução
+// function studentAverage() {
+//   const gradesAverage = grades
+//     .map((element, mapIndex) => {
+//     return element.reduce((sum, current, index, array) => {
+//       if (index === array.length - 1) {
+//         return { name:students[mapIndex], average: ((sum + current) / array.length) };
+//       } 
+//       return sum + current;
+//     });
+//   });
+//   return gradesAverage;
+// }
 
+//solução da trybe
 function studentAverage() {
-  // escreva seu código aqui
+  const nameAndAverage = students.map((student, index)=> ({
+    name: student,
+    average: (grades[index].reduce((acc, curr)=> acc+curr, 0 ) / grades[index].length),
+  }));
+  return nameAndAverage;
 }
 
 const expected = [

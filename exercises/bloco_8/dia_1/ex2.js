@@ -66,11 +66,23 @@ const books = [
   },
 ];
 
+
+// solução proposta pela Trybe
+// function smallerName() {
+//   let nameBook;
+//   // escreva aqui o seu código
+//   books.forEach((book) => {
+//     if (!nameBook || book.name.length < nameBook.length) {
+//       nameBook = book.name;
+//     }
+//   });
+//   // Variável nameBook que receberá o valor do menor nome;
+//   return nameBook;
+// }
+
 function smallerName() {
   let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
+  books.forEach((book) => !nameBook || book.name.length < nameBook.length ? nameBook = book.name : false );
   return nameBook;
 }
 

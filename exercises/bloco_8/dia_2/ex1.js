@@ -1,5 +1,3 @@
-// Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
-// Dica: Use a função map
 
 const assert = require('assert');
 
@@ -66,6 +64,9 @@ const books = [
   },
 ];
 
+// Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
+// Dica: Use a função map
+
 const expectedResult = [
   'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
   'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
@@ -76,7 +77,7 @@ const expectedResult = [
 ];
 
 function formatedBookNames() {
-  // escreva seu código aqui
+  return books.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`)
 }
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
