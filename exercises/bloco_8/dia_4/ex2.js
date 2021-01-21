@@ -3,6 +3,14 @@
 
 const assert = require('assert')
 
+const sum = (...numbers) => numbers.reduce((acc, curr) => acc += curr, 0);
+
+//Solução Trybe
+// const sum = (...numbers) => {
+//   let total = 0
+//   for (number of numbers) total += number
+//   return total
+//  }
 // escreva sum abaixo
 
 assert.strictEqual(sum(), 0)

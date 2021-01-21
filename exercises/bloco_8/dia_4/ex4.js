@@ -32,6 +32,11 @@ const people = [
 ]
 
 // escreva filterPeople abaixo
+const bornIn20Century = (year) => year >= 1901 && year <= 2000;
+const isAustralian = (nationality) => nationality === "Australian";
+const filterPeople = (people) => people.filter(
+    ({ bornIn, nationality }) => bornIn20Century(bornIn) && isAustralian(nationality)
+)
 
 const filteredPeople = filterPeople(people)
 
