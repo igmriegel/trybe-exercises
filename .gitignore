@@ -1,2 +1,5 @@
 ### vscode ###
 exercises/.vscode/launch.json
+node_modules
+package-lock.json
+package.json
