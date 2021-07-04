@@ -1,4 +1,4 @@
-const calcular = (a, b, c) => {
+const calcular = async (a, b, c) => {
   return new Promise((res, rej) => {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
       rej('Informe apenas números');
@@ -14,6 +14,10 @@ const calcular = (a, b, c) => {
   });
 }
 
-(async function () {
-  console.log(await calcular(1, 2, 3))
-})()
+const genRandom = () => {
+  return Math.floor(Math.random() * 100 + 1);
+}
+
+console.log(calcular(...Array.from({length: 3}).map(() => genRandom()))
+  .then((res) => console.log(res))
+  .catch((error) => console.log(error)))
