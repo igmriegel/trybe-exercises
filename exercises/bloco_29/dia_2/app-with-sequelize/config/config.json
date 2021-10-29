@@ -1,9 +1,0 @@
-{
-  "development": {
-    "username": "igmriegel",
-    "password": "100510Bruna&Igor",
-    "database": "first_time_sqlize",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
