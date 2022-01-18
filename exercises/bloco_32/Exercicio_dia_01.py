@@ -1,6 +1,8 @@
 import math
 
 # Exercício 1: Crie uma função que receba dois números e retorne o maior deles.
+
+
 def biggest_number(a, b):
     if a > b:
         return a
@@ -11,6 +13,8 @@ def biggest_number(a, b):
 print(biggest_number(10, 100))
 
 # Exercício 2: Calcule a média aritmética dos valores contidos em uma lista.
+
+
 def average_of_list(list):
     return sum(list) / len(list)
 
@@ -19,6 +23,8 @@ print(average_of_list([1, 2, 3, 4]))
 
 # Exercício 3: Faça um programa que, dado um valor n qualquer, tal que n > 1 ,
 # imprima na tela um quadrado feito de asteriscos de lado de tamanho n.
+
+
 def print_squares(n):
     for i in range(n):
         print("*" * n)
@@ -30,6 +36,8 @@ print(print_squares(5))
 # com a  maior quantidade de caracteres. Por exemplo, para
 # ["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]
 # , o retorno deve ser "Fernanda" .
+
+
 def larger_name(list_of_names):
     largest_name = {"name": "", "size": 0}
     for name in list_of_names:
@@ -55,6 +63,8 @@ print(larger_name(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]))
 # R$ 80,00. Crie uma função que retorne dois valores em uma tupla contendo a
 # quantidade de latas de tinta a serem compradas e o preço total a partir do
 # tamanho de uma parede(em m²).
+
+
 def paint_costs(area):
     can_price = 80
     required_liters = area / 3
@@ -79,6 +89,8 @@ def paint_costs_2(area):
 #   Triângulo Equilátero: três lados iguais;
 #   Triângulo Isósceles: quaisquer dois lados iguais;
 #   Triângulo Escaleno: três lados diferentes.
+
+
 def type_of_triangle(side1, side2, side3):
     is_triangle = (
         side1 + side2 > side3
@@ -98,6 +110,8 @@ def type_of_triangle(side1, side2, side3):
 # Bônus
 # Exercício 1: Dada uma lista, descubra o menor elemento. Por exemplo,
 # [5, 9, 3, 19, 70, 8, 100, 2, 35, 27] deve retornar 2.
+
+
 def minimum(numbers):
     smaller = numbers[0]
     for number in numbers:
@@ -110,6 +124,8 @@ print(minimum([5, 9, 3, 19, 70, 8, 100, 2, 35, 27]))
 # Exercício 2: Faça um programa que, dado um valor n qualquer, tal que n > 1 ,
 # imprima na tela um triângulo retângulo com n asteriscos de base. Por exemplo,
 # para n = 5 o triângulo terá 5 asteriscos na base:
+
+
 def draw_triangle(n):
     for row in range(1, n + 1):
         print(row * "*")
@@ -118,6 +134,8 @@ def draw_triangle(n):
 # Exercício 3: Crie uma função que receba um número inteiro N e retorne o
 # somatório de todos os números de 1 até N . Por exemplo, para N = 5 , o valor
 # esperado será 15.
+
+
 def summation(limit):
     total = 0
     for number in range(1, limit + 1):
@@ -137,6 +155,8 @@ def summation(limit):
 # combustível (codificado da seguinte forma: A - álcool, G - gasolina), e
 # retorne o valor a ser pago pelo cliente, sabendo-se que o preço do litro
 # da gasolina é R$ 2,50, e o preço do litro do álcool é R$ 1,90.
+
+
 def fuel_price(type, liters):
     if type == "A":
         price = 1.90
