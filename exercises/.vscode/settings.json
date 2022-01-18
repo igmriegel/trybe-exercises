@@ -14,5 +14,6 @@
       "password": "100510Bruna&Igor"
     }
   ],
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "python.formatting.provider": "black"
 }
