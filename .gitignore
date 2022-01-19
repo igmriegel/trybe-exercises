@@ -1,4 +1,5 @@
 ### vscode ###
 exercises/.vscode/launch.json
-/test-app-pasta-exercicios
 /node_modules
+node_modules
+package-lock.json
